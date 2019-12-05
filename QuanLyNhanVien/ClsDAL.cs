@@ -91,15 +91,14 @@ namespace QuanLyNhanVien
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@macanbo",SqlDbType.NVarChar).Value=nv.MaCanBo;
                 cmd.Parameters.Add("@hoten", SqlDbType.NVarChar).Value = nv.HoTen;
-               // cmd.Parameters.Add("@namsinh", SqlDbType.Date).Value = nv.MaCanBo;
-                //cmd.Parameters.Add("@chuyenmon", SqlDbType.NVarChar).Value = nv.ChuyenMon;
-               // cmd.Parameters.Add("@trinhdo", SqlDbType.NVarChar).Value = nv.TrinhDo;
-               // cmd.Parameters.Add("@hesoluong", SqlDbType.Int).Value = nv.HesoLuong;
-               // cmd.Parameters.Add("@anchua", SqlDbType.Money).Value = nv.TienAnTrua;
-               // cmd.Parameters.Add("@namtanluong", SqlDbType.Date).Value = nv.NamTanLuong;
-              //  cmd.Parameters.Add("@xeploai", SqlDbType.NVarChar).Value = nv.XepLoai;
-               // cmd.Parameters.Add("@gioitinh", SqlDbType.NVarChar).Value = nv.GioiTinh;
-              //  cmd.Parameters.Add("@luong", SqlDbType.Money).Value = nv.Luong;
+                cmd.Parameters.Add("@namsinh", SqlDbType.DateTime).Value = Convert.ToDateTime(nv.NamSinh);
+                cmd.Parameters.Add("@chuyenmon", SqlDbType.NVarChar).Value = nv.ChuyenMon;
+                cmd.Parameters.Add("@trinhdo", SqlDbType.NVarChar).Value = nv.TrinhDo;
+                cmd.Parameters.Add("@hesoluong", SqlDbType.Int).Value = nv.HesoLuong;
+                cmd.Parameters.Add("@namtanluong", SqlDbType.DateTime).Value = Convert.ToDateTime(nv.NamTanLuong);
+                cmd.Parameters.Add("@xeploai", SqlDbType.NVarChar).Value = nv.XepLoai;
+                cmd.Parameters.Add("@gioitinh", SqlDbType.NVarChar).Value = nv.GioiTinh;
+               
                 cmd.ExecuteNonQuery();
                 con.Close();
             }

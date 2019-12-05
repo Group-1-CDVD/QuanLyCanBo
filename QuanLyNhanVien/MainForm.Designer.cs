@@ -44,22 +44,20 @@ namespace QuanLyNhanVien
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtMacanbo = new System.Windows.Forms.TextBox();
             this.txtHoten = new System.Windows.Forms.TextBox();
             this.cbChuyenmon = new System.Windows.Forms.ComboBox();
-            this.txtNamsinh = new System.Windows.Forms.TextBox();
             this.txtHesoluong = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.txtAntrua = new System.Windows.Forms.TextBox();
             this.cbtrinhdo = new System.Windows.Forms.ComboBox();
             this.cbXeploai = new System.Windows.Forms.ComboBox();
             this.cbGioitinh = new System.Windows.Forms.ComboBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.dtNamsinh = new System.Windows.Forms.DateTimePicker();
+            this.dtNamtanluong = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvnhanvien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,15 +132,6 @@ namespace QuanLyNhanVien
             this.label7.TabIndex = 7;
             this.label7.Text = "Năm Tân Lương";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(235, 96);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 13);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Ăn Trưa";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -190,33 +179,12 @@ namespace QuanLyNhanVien
             this.cbChuyenmon.Size = new System.Drawing.Size(136, 21);
             this.cbChuyenmon.TabIndex = 13;
             // 
-            // txtNamsinh
-            // 
-            this.txtNamsinh.Location = new System.Drawing.Point(83, 96);
-            this.txtNamsinh.Name = "txtNamsinh";
-            this.txtNamsinh.Size = new System.Drawing.Size(136, 20);
-            this.txtNamsinh.TabIndex = 14;
-            // 
             // txtHesoluong
             // 
             this.txtHesoluong.Location = new System.Drawing.Point(331, 50);
             this.txtHesoluong.Name = "txtHesoluong";
             this.txtHesoluong.Size = new System.Drawing.Size(140, 20);
             this.txtHesoluong.TabIndex = 16;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(331, 133);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(140, 20);
-            this.textBox6.TabIndex = 17;
-            // 
-            // txtAntrua
-            // 
-            this.txtAntrua.Location = new System.Drawing.Point(331, 93);
-            this.txtAntrua.Name = "txtAntrua";
-            this.txtAntrua.Size = new System.Drawing.Size(140, 20);
-            this.txtAntrua.TabIndex = 18;
             // 
             // cbtrinhdo
             // 
@@ -257,7 +225,7 @@ namespace QuanLyNhanVien
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(515, 127);
+            this.btnAdd.Location = new System.Drawing.Point(540, 127);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(81, 33);
             this.btnAdd.TabIndex = 24;
@@ -267,7 +235,7 @@ namespace QuanLyNhanVien
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(627, 127);
+            this.btnUpdate.Location = new System.Drawing.Point(639, 127);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(74, 33);
             this.btnUpdate.TabIndex = 25;
@@ -283,27 +251,43 @@ namespace QuanLyNhanVien
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
+            // dtNamsinh
+            // 
+            this.dtNamsinh.CustomFormat = "dd/MM/yyyy";
+            this.dtNamsinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtNamsinh.Location = new System.Drawing.Point(79, 93);
+            this.dtNamsinh.Name = "dtNamsinh";
+            this.dtNamsinh.Size = new System.Drawing.Size(200, 20);
+            this.dtNamsinh.TabIndex = 27;
+            // 
+            // dtNamtanluong
+            // 
+            this.dtNamtanluong.CustomFormat = "dd/MM/yyy";
+            this.dtNamtanluong.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtNamtanluong.Location = new System.Drawing.Point(331, 133);
+            this.dtNamtanluong.Name = "dtNamtanluong";
+            this.dtNamtanluong.Size = new System.Drawing.Size(200, 20);
+            this.dtNamtanluong.TabIndex = 28;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(852, 365);
+            this.Controls.Add(this.dtNamtanluong);
+            this.Controls.Add(this.dtNamsinh);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.cbGioitinh);
             this.Controls.Add(this.cbXeploai);
             this.Controls.Add(this.cbtrinhdo);
-            this.Controls.Add(this.txtAntrua);
-            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.txtHesoluong);
-            this.Controls.Add(this.txtNamsinh);
             this.Controls.Add(this.cbChuyenmon);
             this.Controls.Add(this.txtHoten);
             this.Controls.Add(this.txtMacanbo);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -329,21 +313,19 @@ namespace QuanLyNhanVien
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtMacanbo;
         private System.Windows.Forms.TextBox txtHoten;
         private System.Windows.Forms.ComboBox cbChuyenmon;
-        private System.Windows.Forms.TextBox txtNamsinh;
         private System.Windows.Forms.TextBox txtHesoluong;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox txtAntrua;
         private System.Windows.Forms.ComboBox cbtrinhdo;
         private System.Windows.Forms.ComboBox cbGioitinh;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.ComboBox cbXeploai;
+        private System.Windows.Forms.DateTimePicker dtNamtanluong;
+        internal System.Windows.Forms.DateTimePicker dtNamsinh;
 	}
 }

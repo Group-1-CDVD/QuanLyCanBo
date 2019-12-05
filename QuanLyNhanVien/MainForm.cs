@@ -51,13 +51,58 @@ namespace QuanLyNhanVien
         {
 
         }
-
+        public bool CheckData()
+        {
+            if(string.IsNullOrEmpty(txtMacanbo.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập vào Mã Cán Bộ","Thông Báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                txtMacanbo.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtHoten.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập vào Họ Tên Cán Bộ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtMacanbo.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtHoten.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập vào Họ Tên Cán Bộ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtMacanbo.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(cbtrinhdo.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập vào Trình độ Cán Bộ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtMacanbo.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtHesoluong.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập vào Trình độ Cán Bộ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtMacanbo.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(cbXeploai.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập vào Xếp Loại Cán Bộ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtMacanbo.Focus();
+                return false;
+            }
+            return true;
+        }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             ClsNhanVien nv = new ClsNhanVien();
             nv.MaCanBo = txtMacanbo.Text;
             nv.HoTen = txtHoten.Text;
-           // nv.ChuyenMon = cbChuyenmon.Text;
+            nv.ChuyenMon = cbChuyenmon.Text;
+            nv.TrinhDo = cbtrinhdo.Text;
+            nv.HesoLuong = int.Parse(txtHesoluong.Text);
+            nv.XepLoai = cbXeploai.Text;
+            nv.GioiTinh = cbGioitinh.Text;
+            nv.NamSinh = dtNamsinh.Text;
+            nv.NamTanLuong = dtNamtanluong.Text;
             if(clsbill.AddNhanVien(nv))
             {
                 MessageBox.Show("Them Cán Bộ thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -68,7 +113,6 @@ namespace QuanLyNhanVien
                 MessageBox.Show("Them Cán Bộ không thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-
         }
 	}
 }
