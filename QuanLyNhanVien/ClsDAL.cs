@@ -49,9 +49,7 @@ namespace QuanLyNhanVien
         public bool LoginUser(ClsUser us)
         {
             string sql = "usp_LoginUser";
-            SqlConnection con = cndb.getConnect();
-           
-            
+            SqlConnection con = cndb.getConnect(); 
                 con.Open();
                 var cmd = new SqlCommand(sql, con);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -66,5 +64,52 @@ namespace QuanLyNhanVien
                 }    
                return false;
         }
+        // phuong thuc lay het du lieu nhan vien
+        public DataTable getAllNhanVien()
+        {
+            string sql = "usp_Select_All_CanBo";
+            SqlConnection con = cndb.getConnect();
+            con.Open();
+            var cmd = new SqlCommand(sql, con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            con.Close();
+            return dt;
+        }
+
+        // phuong thuc add nhan vien
+        public bool AddNhanVien(ClsNhanVien nv)
+        {
+            string sql = "usp_Add_CanBo";
+            SqlConnection con = cndb.getConnect();
+            try
+            {
+                con.Open();
+                var cmd = new SqlCommand(sql,con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@macanbo",SqlDbType.NVarChar).Value=nv.MaCanBo;
+                cmd.Parameters.Add("@hoten", SqlDbType.NVarChar).Value = nv.HoTen;
+               // cmd.Parameters.Add("@namsinh", SqlDbType.Date).Value = nv.MaCanBo;
+                //cmd.Parameters.Add("@chuyenmon", SqlDbType.NVarChar).Value = nv.ChuyenMon;
+               // cmd.Parameters.Add("@trinhdo", SqlDbType.NVarChar).Value = nv.TrinhDo;
+               // cmd.Parameters.Add("@hesoluong", SqlDbType.Int).Value = nv.HesoLuong;
+               // cmd.Parameters.Add("@anchua", SqlDbType.Money).Value = nv.TienAnTrua;
+               // cmd.Parameters.Add("@namtanluong", SqlDbType.Date).Value = nv.NamTanLuong;
+              //  cmd.Parameters.Add("@xeploai", SqlDbType.NVarChar).Value = nv.XepLoai;
+               // cmd.Parameters.Add("@gioitinh", SqlDbType.NVarChar).Value = nv.GioiTinh;
+              //  cmd.Parameters.Add("@luong", SqlDbType.Money).Value = nv.Luong;
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch
+            {
+                return false;
+            }
+            return true;
+        }
+
+
     }
 }

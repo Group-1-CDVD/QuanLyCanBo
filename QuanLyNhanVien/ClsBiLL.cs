@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Data;
 namespace QuanLyNhanVien
 {
     class ClsBiLL
@@ -19,6 +19,14 @@ namespace QuanLyNhanVien
         public bool LoginUser(ClsUser us)
         {
             return clsdal.LoginUser(us);
+        }
+        public DataTable getAllNhanVien()
+        {
+            return clsdal.getAllNhanVien();
+        }
+        public bool AddNhanVien(ClsNhanVien nv)
+        {
+            return clsdal.AddNhanVien(nv);
         }
     }
 }

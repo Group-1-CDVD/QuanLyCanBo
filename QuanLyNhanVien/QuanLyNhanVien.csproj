@@ -50,6 +50,7 @@
     <Compile Include="ClsBiLL.cs" />
     <Compile Include="ClsConnectDB.cs" />
     <Compile Include="ClsDAL.cs" />
+    <Compile Include="ClsNhanVien.cs" />
     <Compile Include="ClsUser.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
