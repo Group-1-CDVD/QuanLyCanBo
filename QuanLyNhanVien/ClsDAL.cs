@@ -109,6 +109,52 @@ namespace QuanLyNhanVien
             return true;
         }
 
+        // phuong thuc Update 
+        public bool UpdateNhanCanBo(ClsNhanVien nv)
+        {
+            string sql = "usp_Update_CanBo";
+            SqlConnection conn = cndb.getConnect();
+            try
+            {
+                conn.Open();
+                var cmd = new SqlCommand(sql,conn);
+                cmd.Parameters.Add("@macanbo", SqlDbType.NVarChar).Value = nv.MaCanBo;
+                cmd.Parameters.Add("@hoten", SqlDbType.NVarChar).Value = nv.HoTen;
+                cmd.Parameters.Add("@namsinh", SqlDbType.DateTime).Value = Convert.ToDateTime(nv.NamSinh);
+                cmd.Parameters.Add("@chuyenmon", SqlDbType.NVarChar).Value = nv.ChuyenMon;
+                cmd.Parameters.Add("@trinhdo", SqlDbType.NVarChar).Value = nv.TrinhDo;
+                cmd.Parameters.Add("@hesoluong", SqlDbType.Int).Value = nv.HesoLuong;
+                cmd.Parameters.Add("@namtanluong", SqlDbType.DateTime).Value = Convert.ToDateTime(nv.NamTanLuong);
+                cmd.Parameters.Add("@xeploai", SqlDbType.NVarChar).Value = nv.XepLoai;
+                cmd.Parameters.Add("@gioitinh", SqlDbType.NVarChar).Value = nv.GioiTinh;
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch
+            {
+                return false;
+            }
+            return true;
+        }
 
+        // phuong thuc xoa can bo 
+        public bool DeleteCanBo(ClsNhanVien nv)
+        {
+            string sql ="usp_Delete_CanBo";
+            SqlConnection conn = cndb.getConnect();
+            try
+            {
+                 conn.Open();
+                var cmd = new SqlCommand(sql,conn);
+                cmd.Parameters.Add("@macanbo", SqlDbType.NVarChar).Value = nv.MaCanBo;
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

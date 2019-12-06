@@ -93,6 +93,34 @@ namespace QuanLyNhanVien
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if(CheckData())
+            {
+                ClsNhanVien nv = new ClsNhanVien();
+                nv.MaCanBo = txtMacanbo.Text;
+                nv.HoTen = txtHoten.Text;
+                nv.ChuyenMon = cbChuyenmon.Text;
+                nv.TrinhDo = cbtrinhdo.Text;
+                nv.HesoLuong = int.Parse(txtHesoluong.Text);
+                nv.XepLoai = cbXeploai.Text;
+                nv.GioiTinh = cbGioitinh.Text;
+                nv.NamSinh = dtNamsinh.Text;
+                nv.NamTanLuong = dtNamtanluong.Text;
+                if (clsbill.AddNhanVien(nv))
+                {
+                    MessageBox.Show("Them Cán Bộ thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    ShowAllNhanVien();
+                }
+                else
+                {
+                    MessageBox.Show("Them Cán Bộ không thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }
+           
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
             ClsNhanVien nv = new ClsNhanVien();
             nv.MaCanBo = txtMacanbo.Text;
             nv.HoTen = txtHoten.Text;
@@ -103,14 +131,29 @@ namespace QuanLyNhanVien
             nv.GioiTinh = cbGioitinh.Text;
             nv.NamSinh = dtNamsinh.Text;
             nv.NamTanLuong = dtNamtanluong.Text;
-            if(clsbill.AddNhanVien(nv))
+            if(clsbill.UpdateNhanCanBo(nv))
             {
-                MessageBox.Show("Them Cán Bộ thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Update Cán Bộ thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 ShowAllNhanVien();
             }
             else
             {
-                MessageBox.Show("Them Cán Bộ không thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Update Cán Bộ không thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            ClsNhanVien nv = new ClsNhanVien();
+            nv.MaCanBo = txtMacanbo.Text;
+            if(clsbill.DeleteCanBo(nv))
+            {
+                MessageBox.Show("Delete Cán Bộ thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                ShowAllNhanVien();
+            }
+            else
+            {
+                MessageBox.Show("Delete Cán Bộ không thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }

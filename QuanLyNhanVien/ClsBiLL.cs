@@ -28,5 +28,13 @@ namespace QuanLyNhanVien
         {
             return clsdal.AddNhanVien(nv);
         }
+        public bool UpdateNhanCanBo(ClsNhanVien nv)
+        {
+            return clsdal.UpdateNhanCanBo(nv);
+        }
+        public bool DeleteCanBo(ClsNhanVien nv)
+        {
+            return clsdal.DeleteCanBo(nv);
+        }
     }
 }
