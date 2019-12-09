@@ -157,5 +157,31 @@ namespace QuanLyNhanVien
 
             }
         }
+
+        private void quaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void quảnLýCánBộToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainForm mf = new MainForm();
+            mf.Show();
+        }
+
+        private void quảnLýUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            QuanLyUser qluser = new QuanLyUser();
+            qluser.Show();
+        }
+
+        private void tínhLươngCánBộToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TInhLuongCB tlcb = new TInhLuongCB();
+            tlcb.Show();
+        }
 	}
 }
