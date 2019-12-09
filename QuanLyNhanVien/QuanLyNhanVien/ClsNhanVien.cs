@@ -1,11 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿/*
+ * Created by SharpDevelop.
+ * User: Administrator
+ * Date: 09/12/2019
+ * Time: 10:18 AM
+ * 
+ * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ */
+using System;
 
 namespace QuanLyNhanVien
 {
-    class ClsNhanVien
+	/// <summary>
+	/// Description of ClsNhanVien.
+	/// </summary>
+	 class ClsNhanVien
     {
         public string MaCanBo { get; set; }
         public string HoTen { get; set; }

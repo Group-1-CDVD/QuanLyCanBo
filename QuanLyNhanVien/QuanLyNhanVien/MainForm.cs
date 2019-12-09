@@ -1,8 +1,8 @@
 ﻿/*
  * Created by SharpDevelop.
  * User: Administrator
- * Date: 28/11/2019
- * Time: 16:22 PM
+ * Date: 09/12/2019
+ * Time: 10:14 AM
  * 
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
@@ -11,6 +11,9 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Data;
+using System.Data.Sql;
+using System.Data.SqlClient;
+
 namespace QuanLyNhanVien
 {
 	/// <summary>
@@ -18,7 +21,7 @@ namespace QuanLyNhanVien
 	/// </summary>
 	public partial class MainForm : Form
 	{
-        ClsBiLL clsbill;
+		ClsBiLL clsbill;
 		public MainForm()
 		{
 			//

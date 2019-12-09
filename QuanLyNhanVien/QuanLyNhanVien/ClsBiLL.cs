@@ -1,11 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿/*
+ * Created by SharpDevelop.
+ * User: Administrator
+ * Date: 09/12/2019
+ * Time: 10:15 AM
+ * 
+ * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ */
+using System;
 using System.Data;
+using System.Data.Sql;
+using System.Data.SqlClient;
 namespace QuanLyNhanVien
 {
-    class ClsBiLL
+	/// <summary>
+	/// Description of ClsBiLL.
+	/// </summary>
+	class ClsBiLL
     {
         ClsDAL clsdal;
         public ClsBiLL()

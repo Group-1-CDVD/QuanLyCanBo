@@ -1,16 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿/*
+ * Created by SharpDevelop.
+ * User: Administrator
+ * Date: 09/12/2019
+ * Time: 10:17 AM
+ * 
+ * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ */
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Data.Sql;
 using System.Data.SqlClient;
+
 namespace QuanLyNhanVien
 {
-    class ClsDAL
+	/// <summary>
+	/// Description of ClsDAL.
+	/// </summary>
+	class ClsDAL
     {
         ClsConnectDB cndb;
         SqlDataAdapter da;

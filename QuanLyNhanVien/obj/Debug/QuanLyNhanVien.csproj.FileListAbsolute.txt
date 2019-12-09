@@ -1,9 +1,0 @@
-E:\QuanLyCanBo\QuanLyCanBo\QuanLyNhanVien\bin\Debug\QuanLyNhanVien.exe
-E:\QuanLyCanBo\QuanLyCanBo\QuanLyNhanVien\bin\Debug\QuanLyNhanVien.pdb
-E:\QuanLyCanBo\QuanLyCanBo\QuanLyNhanVien\obj\Debug\QuanLyNhanVien.csprojResolveAssemblyReference.cache
-E:\QuanLyCanBo\QuanLyCanBo\QuanLyNhanVien\obj\Debug\QuanLyNhanVien.MainForm.resources
-E:\QuanLyCanBo\QuanLyCanBo\QuanLyNhanVien\obj\Debug\QuanLyNhanVien.csproj.GenerateResource.Cache
-E:\QuanLyCanBo\QuanLyCanBo\QuanLyNhanVien\obj\Debug\QuanLyNhanVien.exe
-E:\QuanLyCanBo\QuanLyCanBo\QuanLyNhanVien\obj\Debug\QuanLyNhanVien.pdb
-E:\QuanLyCanBo\QuanLyCanBo\QuanLyNhanVien\obj\Debug\QuanLyNhanVien.Register.resources
-E:\QuanLyCanBo\QuanLyCanBo\QuanLyNhanVien\obj\Debug\QuanLyNhanVien.Login.resources

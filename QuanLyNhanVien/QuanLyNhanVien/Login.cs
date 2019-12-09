@@ -1,17 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿/*
+ * Created by SharpDevelop.
+ * User: Administrator
+ * Date: 09/12/2019
+ * Time: 10:20 AM
+ * 
+ * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ */
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace QuanLyNhanVien
 {
-    public partial class Login : Form
-    {
-        ClsBiLL clbill;
+	/// <summary>
+	/// Description of Login.
+	/// </summary>
+	public partial class Login : Form
+	{
+		ClsBiLL clbill;
         public Login()
         {
             InitializeComponent();
@@ -20,9 +26,9 @@ namespace QuanLyNhanVien
 
         private void label3_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            /*this.Hide();
             Register  register = new Register();
-            register.Show();
+            register.Show();*/
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -80,5 +86,5 @@ namespace QuanLyNhanVien
                 }
             }
         }
-    }
+	}
 }
